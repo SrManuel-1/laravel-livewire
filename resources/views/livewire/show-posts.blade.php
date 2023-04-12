@@ -6,10 +6,17 @@
     </x-slot>
     {{-- Because she competes with no one, no one can compete with her. --}}
 
+    {{$search}}
+
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1>Hello world</h1>
         <!---Table---->
         <x-table>{{-- LLama al componente table de la carpeta componentes --}}
+
+            <div class="px-6 py-4">
+                <input type="text" wire:model="search">{{-- Este input trae informacion desde el Livewire/ShowPosts --}}
+            </div>
+
             <table class="min-w-full divide-y divide-gray-200">
                 <thead class="bg-gray-50">
                     <tr>

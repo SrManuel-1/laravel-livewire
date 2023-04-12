@@ -6,13 +6,10 @@ use Livewire\Component;
 
 class ShowPosts extends Component
 {
-    public $titulo;
 
-    public function mount($title){//se define un metodo llamado mount
-        $this->titulo = $title; //Se le asigna esta informacion a esta propiedad
-    }
     public function render()
     {
-        return view('livewire.show-posts');
+        return view('livewire.show-posts')
+        ->layout('layouts.base');//Se define que plantilla queremos usar como maestra
     }
 }

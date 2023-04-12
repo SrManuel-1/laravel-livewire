@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        \App\Models\Post::factory(100)->create(); //Semilla que creara 100 registros falsos en la base de datos
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

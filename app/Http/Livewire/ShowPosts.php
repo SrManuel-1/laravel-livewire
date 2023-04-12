@@ -3,17 +3,14 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use App\Models\Post;
 
 class ShowPosts extends Component
 {
-    public $name;//Definimos la propiedad
-
-    public function mount($name){
-        $this->name = $name; //Le asignamos un valor a esa propiedad
-    }
 
     public function render()
     {
-        return view('livewire.show-posts');
+        $posts = Post::all(); //recuperamos toda la informacion del modelo
+        return view('livewire.show-posts', compact('posts')); //Renderizamos la vista con la informacion del modelo
     }
 }

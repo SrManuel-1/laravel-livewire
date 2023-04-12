@@ -21,3 +21,5 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', config('jetstream.auth_session'), 'verified'])->group(function () {
     Route::get('/dashboard', ShowPosts::class)->name('dashboard');
 });
+
+Route::get('prueba/{name}', ShowPosts::class);//Ruta con informacion en la Url

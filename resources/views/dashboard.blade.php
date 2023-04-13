@@ -7,8 +7,9 @@
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            @livewire('show-posts', ['title' => 'Este es un titulo de prueba']) {{-- Aqui pasamos un parametro el cual sera usado en el componente, seguido de aqui pasamos a app/http/Livewire/ShowPosts --}}
-            {{-- @livewire('nav.show-posts') --}}
+            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+                <x-welcome />
+            </div>
         </div>
     </div>
 </x-app-layout>
